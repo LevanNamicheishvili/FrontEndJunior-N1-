@@ -7,52 +7,50 @@
     text-decoration: none;
     font-size: 10px;
     border: none;
-
-
 }
-
 .body {
     font-family: 'Chivo Mono', monospace;
-}
-.relative{
-    position: relative;
 }
 .containter {
     max-width: 1440px;
     width: 90%;
     margin: 0 auto;
-
 }
-
-.header {}
-
+.text-center {
+    text-align: center;
+}
+.m-5 {
+    margin: 5rem;
+}
+.m-10 {
+    margin: 10rem;
+}
+.relative{
+    position: relative;
+}
+.section-title {
+    font-size: 2.8rem;
+    color: #05520D;
+}
 .navigation {
     display: flex;
     justify-content: space-between;
     padding: 5rem;
     align-items: center;
-
 }
-
 .nav-ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
 }
-
 .nav-li:not(:last-child) {
     margin-right: 5rem;
 }
-
-
 .nav-link {
     font-size: 2.4rem;
     text-decoration: none;
     color: #863503;
-
-
 }
-
 .input {
     background-color: #fff1e8;
     border-radius: 0.7rem ;
@@ -64,3 +62,34 @@
     top: 50%;
     transform:translateY(-50%) ;
 } 
+.about-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    width: 90%; 
+    color: #863503;
+}
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.map iframe {
+    border-radius: 1.6rem;
+}
+address span {
+    font-weight: bold;
+}
+.about-info address span,
+.about-info div time, 
+.about-info ul li {
+    font-size: 1.8rem;
+    display: block;
+}
+.about-info address span:not(:last-child),
+.about-info div time:not(:last-child),
+.about-info ul li:not(:last-child)
+{
+    margin-bottom: 2rem;
+}
