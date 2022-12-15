@@ -7,3 +7,58 @@
     text-decoration: none;
     font-size: 10px;
 }
+
+.text-center {
+    text-align: center;
+}
+
+.m-5 {
+    margin: 5rem;
+}
+
+.m-10 {
+    margin: 10rem;
+}
+
+.section-title {
+    font-size: 2.8rem;
+    color: #05520D;
+
+}
+
+.about-info {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 90rem;
+    width: 90%; 
+    color: #863503;
+}
+
+.map {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.map iframe {
+    border-radius: 1.6rem;
+}
+
+address span {
+    font-weight: bold;
+}
+
+.about-info address span,
+.about-info div time, 
+.about-info ul li {
+    font-size: 1.8rem;
+    display: block;
+}
+
+.about-info address span:not(:last-child),
+.about-info div time:not(:last-child),
+.about-info ul li:not(:last-child)
+{
+    margin-bottom: 2rem;
+}
