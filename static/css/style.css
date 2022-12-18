@@ -37,11 +37,27 @@
     justify-content: space-between;
     padding: 5rem;
     align-items: center;
+    transition-duration: .3s;
 }
 .nav-ul {
     display: flex;
     justify-content: space-evenly;
     align-items: center;
+    transition: 0.3s;
+}
+.nav-ul.show, .navigation.show {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    visibility: visible;
+    pointer-events: all;
+}
+.nav-ul.show {
+    align-items: flex-start;
+}
+.navigation.show {
+    transform: translateY(20%);
+    height: auto;
 }
 .nav-li:not(:last-child) {
     margin-right: 5rem;
@@ -106,45 +122,47 @@ transition: all 0.3 ease-in-out;
 background-color: rgb(3, 3, 3);
 }
 
-@media screen and (max-width:928px) {
+@media screen and (max-width:992px) {
+    .navigation {
+        visibility: hidden;
+        pointer-events: none;
+        transform: translateY(-200%);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        height: 0;
+    }
+    .nav-ul  {
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+        min-width: 20rem;
+    }
+    .nav-ul .nav-li {
+        margin-bottom: 2rem;
+    }
+    .hamburger { 
+        display: block;
+        position: absolute;
+        top: 2rem;
+        left: 2rem;
+    }
+    .hamburger.active .bar:nth-child(2){ 
+        opacity: 0;
+    }
+    .hamburger.active .bar:nth-child(1){ 
+        transform: translateY(8px) rotate(45deg);
 
-.hamburger { 
-    display: block;
+    }
+    .hamburger.active .bar:nth-child(3){ 
+      transform: translateY(-8px) rotate(-45deg);
+    }
+    .bar { 
+        transition: .3s ease;
+    }
 }
-.hamburger.active .bar:nth-child(2){ 
-    opacity: 0;
-}
-.hamburger.active .bar:nth-child(1){ 
-    transform: translateY(8px) rotate(45deg);
-
-}
-.hamburger.active .bar:nth-child(3){ 
-  transform: translateY(-8px) rotate(-45deg);
-}
-.nav-ul { 
-    display: flex;
-    position:absolute;
-    left: -100%;
-    width: 100%;
-    height: 53vh;
-    top: 100px;
-    display: flex;
-    background-color: bisque;
-    flex-direction: column;
-    text-align: center;
-    transition: 0.3s;
-}
-
-.bar { 
-    transition: 1s ease;
-}
-
-.nav-ul.active { 
-    left: 0;
-
-}
-.input { 
-    display: flex;
-}
-
+@media screen and (max-width:580px) {
+    .navigation {
+        padding: 2rem;
+    }
 }
