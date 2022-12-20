@@ -122,6 +122,45 @@ transition: all 0.3 ease-in-out;
 background-color: rgb(3, 3, 3);
 }
 
+footer {
+    background-color: #B78A6D3D;
+    padding-top: 3.6rem;
+}
+
+.footer-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.social-icons-flex {
+    display: flex;
+    margin-bottom: 6rem;
+}
+
+.social-icon-wrapper {
+    margin: 0 4.5rem;
+}
+
+.slogan {
+    font-weight: bold;
+    color: #400404;
+    font-size: 2.7rem;
+}
+
+.footer-title {
+    color: #05520D;
+    font-size: 2rem;
+    margin-bottom: 4rem;
+}
+
+.footer-links {
+    color: #863503;
+    font-size: 1.8rem;
+    margin-bottom: 2.8rem;
+}
+
+
 @media screen and (max-width:992px) {
     .navigation {
         visibility: hidden;
@@ -166,3 +205,4 @@ background-color: rgb(3, 3, 3);
         padding: 2rem;
     }
 }
+
